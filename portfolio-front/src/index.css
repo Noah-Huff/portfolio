@@ -1,0 +1,66 @@
+:root {
+  --dark-blue: #0d1f2d;
+  --light-blue: #546a7b;
+  --sepia: #EBD3AD;
+  --light-grey: #9EA3B0;
+  --wine: #6A2E35;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* Header animations */
+.header {
+  background-color: var(--dark-blue);
+}
+.header img {
+  max-width: 100%;
+  height: auto;
+  opacity: 1;
+}
+.header-outer {
+  max-width: 100%;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+  /* z-index: -1; */
+}
+.header-inner {
+  animation: move 40s linear infinite;
+  position: absolute; 
+  display: block;
+  width: 200%;
+}
+.header-name {
+  /* Below is one way to add a font border */
+  /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+  font-size: 3rem;
+  position: absolute;
+  display: block;
+  overflow: visible;
+  /* z-index: 1; */
+  color: var(--sepia);
+  margin-left: 25px;
+}
+@keyframes move {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+.header span {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
