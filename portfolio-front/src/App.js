@@ -1,8 +1,12 @@
 //import logo from './logo.svg';
 //import './App.css';
+/************rafce for functional component with exports**************/
 import React, { useState } from 'react';
 import Header from './components/Header';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Footer from './components/Footer';
+import HomeScreen from './screens/HomeScreen';
+import Projects from './screens/Projects';
 
 
 const App = () => {
@@ -14,11 +18,14 @@ const App = () => {
   
   return (
     <>
+    <Router>
       <Header check={check} expandMenu={expandMenu}/>
         <main>
-          <h1>Noah Huff</h1>
+          <Route path='/' component={HomeScreen} exact />
+          <Route path='/projects' component={Projects} exact />
         </main>
       <Footer/>
+    </Router>
     </>
   );
 }

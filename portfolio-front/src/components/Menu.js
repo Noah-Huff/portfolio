@@ -1,8 +1,10 @@
 import React from 'react-dom';
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
     return (
         <div className="menu-wrap">
+            <label>
             <input
             type="checkbox" 
             className='toggler'
@@ -12,14 +14,15 @@ const Menu = () => {
                 <div>
                     <div>
                         <ul>
-                            <li><a>Home</a></li>
-                            <li><a>About</a></li>
-                            <li><a>Work</a></li>
+                            <li><Link to={`/`}>Home</Link></li>
+                            <li><a>About Me</a></li>
+                            <li><Link to={`/projects`}>Projects</Link></li>
                             <li><a>Contact</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
+            </label>
        </div>
     )
 }

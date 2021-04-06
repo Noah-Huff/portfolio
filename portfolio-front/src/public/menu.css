@@ -27,7 +27,7 @@
     width: 60px;
     height: 60px;
     padding: 1rem;
-    background-color: var(--dark-blue);
+    background-color: var(--primary-background);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,13 +37,19 @@
     position: relative;
     width: 100%;
     height: 2px;
-    background-color: var(--sepia);
+    background-color: var(--primary-teal);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.4s ease;
 }
 /* top and bottom lines */
+.menu-wrap .hamburger > div:before {
+    background-color: var(--primary-yellow);
+}
+.menu-wrap .hamburger > div:after {
+    background-color: var(--primary-red);
+}
 .menu-wrap .hamburger > div:before,
 .menu-wrap .hamburger >div:after {
     content: '';
@@ -52,7 +58,7 @@
     top: -10px;
     width: 100%;
     height: 2px;
-    background-color: var(--sepia);
+    /* background-color: var(--primary-red); */
 }
 /* bottom line */
 .menu-wrap .hamburger > div::after {
@@ -93,8 +99,10 @@
     position: fixed;
     top: 0;
     right: 0;
+    /* width: 200px; */
+    /* height: 300px;  */
     width: 100%;
-    height: 100%; 
+    height: 100%;
     visibility: hidden;
     overflow: hidden;
     display: flex;
@@ -103,7 +111,7 @@
 }
 
 .menu-wrap .menu > div {
-    background-color: var(--dark-blue);
+    background-color: var(--primary-background);
     border-radius: 50%;
     width: 200vw;
     height: 200vw;
@@ -113,7 +121,7 @@
     justify-content: center;
     transform: scale(0);
     transition: all 0.4s ease;
-    opacity: .8;
+    opacity: .9;
 }
 .menu-wrap .menu > div > div {
     text-align: center;
@@ -124,12 +132,13 @@
 }
 .menu-wrap .menu > div > div > ul > li {
     list-style: none;
-    color: var(--sepia);
+    color: var(--primary-text);
     font-size: 1.5rem;
     padding: 1rem;
 }
 .menu-wrap .menu > div > div > ul > li > a {
-    color: var(--sepia);
+    margin-right: 50px;
+    color: var(--primary-text);
     text-decoration: none;
     transition: color 0.4s ease;
 }

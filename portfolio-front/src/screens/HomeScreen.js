@@ -1,11 +1,13 @@
 import React from 'react';
-import Checkbox from '../components/Checkbox';
+import { Container } from 'react-bootstrap';
+import Profile from '../components/Profile';
 
 const HomeScreen = () => {
     return (
         <div>
-
-
+            <Container>
+                <Profile/>
+            </Container>
         </div>
     )
 }
