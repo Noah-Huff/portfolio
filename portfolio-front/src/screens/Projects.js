@@ -18,7 +18,6 @@ const Projects = () => {
             speed: 0.75,
         })
     }, []);
-    let rellax = new Rellax(".rellax");
     return (
         <div className="wrapper">
 
@@ -43,13 +42,15 @@ const Projects = () => {
                     <div className="project-details">
                         <h1 className="project-title">Blackjack</h1>
                         <p>This is a project from one of my classes. The requirement was a web app that required client side scripting. The inspiration for this project is partially from a Christmas party at a previous job where I learned Blackjack, and a coding challenge that I found online and wanted to tackle. I built this using Reactjs since I was hoping to learn more about the framework. This was a fun challenge that introduced me to the concept of state, and how to pass state down to other components!</p>
+                        <br/><br/>
+                        <p>You can see the code on Github <a className="github-links" href="https://github.com/Noah-Huff/blackjack-REACT-project">HERE</a>.</p>
                         <a href="https://playblackjackgame.herokuapp.com/"><div id="proj2" className="button3">See This Project</div></a>
                     </div>
                 </div>
-                <div class="sphere-wrapper rellax2" >
-                    <section class="stage">
-                        <figure class="sphere">
-                            <span class="shadow"></span>
+                <div className="sphere-wrapper rellax2" >
+                    <section className="stage">
+                        <figure className="sphere">
+                            <span className="shadow"></span>
                         </figure>
                     </section>
                 </div>
@@ -64,8 +65,8 @@ const Projects = () => {
                         <a href=""><div id="proj3" className="button3">See This Project</div></a>
                     </div>
                 </div>
-                <div class="pyramid-wrapper rellax3" >
-                    <div class="pyramid"></div>
+                <div className="pyramid-wrapper rellax3" >
+                    <div className="pyramid"></div>
                 </div>
             </div>
 

@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 import HomeScreen from './screens/HomeScreen';
 import Projects from './screens/Projects';
+import Contact from './screens/Contact';
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
         <main>
           <Route path='/' component={HomeScreen} exact />
           <Route path='/projects' component={Projects} exact />
+          <Route path='/contact' component={Contact} exact />
         </main>
       <Footer/>
     </Router>
