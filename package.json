@@ -1,0 +1,32 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My personal portfolio website.",
+  "main": "backend/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run front\" \"npm run back\"",
+    "back": "nodemon",
+    "front": "npm start -prefix portfolio-front"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Noah-Huff/portfolio.git"
+  },
+  "author": "Noah Huff",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Noah-Huff/portfolio/issues"
+  },
+  "homepage": "https://github.com/Noah-Huff/portfolio#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "concurrently": "^6.0.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.5.0",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "nodemon": "^2.0.7",
+    "qs": "^6.10.1"
+  }
+}

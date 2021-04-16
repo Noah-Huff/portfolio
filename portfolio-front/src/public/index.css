@@ -56,3 +56,11 @@ main {
 .textarea-input {
   max-width: 750px;
 }
+button {
+  outline: transparent;
+  border: transparent;
+}
+.contact-btn {
+  max-width: 150px;
+  margin-top: 25px;
+}
