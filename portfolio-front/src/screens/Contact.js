@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import axios from 'axios';
-import qs from 'qs';
 
 const Contact = () => {
     let [comment, setComment] = useState("");
@@ -28,12 +27,7 @@ const Contact = () => {
                 'Content-Type': 'application/json'
             }
         });
-
-        //res.data.data;
-
-        //setComment("");
-        //setName("");
-        //setEmail("");
+        console.log('RES ', res);
 
     }
 
