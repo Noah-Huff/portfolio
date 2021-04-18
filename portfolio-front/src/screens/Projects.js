@@ -60,7 +60,7 @@ const Projects = () => {
             <div className="project-with-shape">
                 <div className="project">
                     <div className="project-details">
-                        <h1 className="project-title">Sample Project</h1>
+                        <h1 className="project-title">Sample Project Goes Here</h1>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus fugit laboriosam, eum repellat hic iusto aliquam in rerum error ab facilis asperiores est veritatis aspernatur magnam ea nesciunt eveniet? At natus, sunt doloremque accusamus ullam ducimus architecto ut quam quo modi qui dicta adipisci quasi. Architecto voluptatibus delectus facere non ut inventore reprehenderit animi, nostrum maxime nihil, repellat odio voluptatem eos veniam saepe ducimus quisquam recusandae illo accusantium, quos praesentium!</p>
                         <a href=""><div id="proj3" className="button3">See This Project</div></a>
                     </div>
