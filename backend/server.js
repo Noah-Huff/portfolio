@@ -35,5 +35,6 @@ if(process.env.NODE_ENV === 'production') {
     app.get('*', (req, res) => res.sendFile(path.resolve(__dir, 'portfolio-front', 'build', 'index.html')));
 }
 console.log("ENV ", process.env.NODE_ENV);
+console.log("CORS ", process.env.CORS);
 
 app.listen(PORT, console.log("Express Listening on port: ", PORT));
