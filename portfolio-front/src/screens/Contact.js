@@ -29,6 +29,7 @@ const Contact = () => {
             console.log("Error ", err);
         }
 
+        
         setComment("");
         setName("");
         setEmail("");
