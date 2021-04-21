@@ -9,7 +9,10 @@ let PORT = process.env.PORT;
 app.use('/api', (req, res, next) => {
     console.log("inside /api for express")
     console.log("Development CORS");
-    res.header("Access-Control-Allow-Origin", "https://noahhuff.herokuapp.com" && "http://localhost:3000");
+    res.header("Access-Control-Allow-Origin", "https://noahhuff.herokuapp.com");
+    if (process.env.NODE_ENV == 'development') {
+        res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+    }
 
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     res.header('Access-Control-Allow-Methods', 'GET, PATCH, PUT, POST, DELETE, OPTIONS');
