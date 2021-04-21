@@ -6,6 +6,7 @@ const Contact = () => {
     let [comment, setComment] = useState("");
     let [name, setName] = useState("");
     let [email, setEmail] = useState("");
+    let [success, setSuccess] = useState(false);
 
     let sendComment = async () => {
         console.log("Send Comment");
@@ -33,6 +34,7 @@ const Contact = () => {
         setComment("");
         setName("");
         setEmail("");
+        setSuccess(true);
         console.log("Email ", email);
 
     }
@@ -44,6 +46,11 @@ const Contact = () => {
                     I'm so glad you came and visited my website. If you have comments, questions, or anything at all please send me a note.
                     Leave your email, and I'll be sure and get back to you!
                 </p>
+                {
+                    success == true
+                    ? <div className="alert alert-success" role="alert">Thanks for your feedback!</div> 
+                    : <div></div>
+                }
                 <label className="text-input-label">Name: </label>
                 <input id="name" className="text-input-1line" type="text" value={name} onChange={() => setName(document.getElementById("name").value)}></input>
                 <label className="text-input-label">email: </label>

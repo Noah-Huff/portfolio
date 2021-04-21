@@ -3,7 +3,7 @@ const smtpTransport = require('nodemailer-smtp-transport');
 
 require('dotenv').config();
 
-const send = (userComment) => {
+const send = (userComment, userName, userEmail) => {
     const transporter = nodeMailer.createTransport(smtpTransport({
         //service: 'gmail',
         host: 'smtp.gmail.com',
@@ -18,8 +18,8 @@ const send = (userComment) => {
     let mailOptions = {
         from: process.env.EMAIL,
         to: process.env.EMAIL,
-        subject: 'TESTING',
-        text: userComment
+        subject: "noahhuff.herokuapp.com Comment",
+        text: userName + " Says: \n\n" + userComment + "\n\nFrom: " + userEmail
     };
     console.log("USER COMMENT ", userComment);
     transporter.sendMail(mailOptions, (error, info) => {

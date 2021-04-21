@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 
 app.post('/api/contact/comment', (req, res) => {
     console.log("INSIDE EXPRESS POST", req.body.comment);
-    sentEmail.send(req.body.comment);
+    sentEmail.send(req.body.comment, req.body.name, req.body.email);
     res.end("success");
 });
 
