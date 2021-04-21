@@ -9,8 +9,9 @@ let PORT = process.env.PORT;
 app.use('/api', (req, res, next) => {
     console.log("inside /api for express")
     console.log("Development CORS");
+    console.log("Process ", process.env.NODE_ENV);
     res.header("Access-Control-Allow-Origin", "https://noahhuff.herokuapp.com");
-    if (process.env.NODE_ENV == 'development') {
+    if (process.env.NODE_ENV === 'development') {
         res.header("Access-Control-Allow-Origin", "http://localhost:3000");
     }
 
