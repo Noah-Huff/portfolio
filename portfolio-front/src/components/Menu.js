@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, Redirect, Route, useHistory } from 'react-router-dom';
 import { svgZoom } from '../javascripts/animations';
-import { Button } from 'react-bootstrap';
 
 const Menu = () => {
     let [check, setCheck] = useState(false);

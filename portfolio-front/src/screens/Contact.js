@@ -14,7 +14,7 @@ const Contact = () => {
         console.log("Comment: ", comment);
         //let sendData = new FormData();
         //sendData.append('name', 'test');
-        let sendData = 
+        let sendData =
         {
             "name": name,
             "email": email,
@@ -29,7 +29,7 @@ const Contact = () => {
             console.log("Error ", err);
         }
 
-        
+
         setComment("");
         setName("");
         setEmail("");
@@ -38,7 +38,7 @@ const Contact = () => {
     }
 
     return (
-
+        <div id="contact-background">
             <div className="text-card contact-form">
                 <p>
                     I'm so glad you came and visited my website. If you have comments, questions, or anything at all please send me a note.
@@ -50,8 +50,9 @@ const Contact = () => {
                 <input id="email" className="text-input-1line" type="email" value={email} onChange={() => setEmail(document.getElementById("email").value)}></input>
                 <label className="text-input-label">Comments: </label>
                 <textarea id="comment" className="textarea-input" rows={7} value={comment} onChange={() => setComment(document.getElementById("comment").value)}></textarea>
-                <button onClick={sendComment}  className="contact-btn"><div className="button">Submit</div></button>
+                <button onClick={sendComment} className="contact-btn"><div className="button">Submit</div></button>
             </div>
+        </div>
     )
 }
 

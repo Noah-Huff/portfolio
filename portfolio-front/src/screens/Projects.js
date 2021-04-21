@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react'
 import Rellax from 'rellax';
+import githubLogo from '../public/githubLogo.svg';
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
 
@@ -23,8 +25,10 @@ const Projects = () => {
             </div>
 
             <div className="text-card">
-                <h1 className="project-title">Put cool trees here</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus fugit laboriosam, eum repellat hic iusto aliquam in rerum error ab facilis asperiores est veritatis aspernatur magnam ea nesciunt eveniet? At natus, sunt doloremque accusamus ullam ducimus architecto ut quam quo modi qui dicta adipisci quasi. Architecto voluptatibus delectus facere non ut inventore reprehenderit animi, nostrum maxime nihil, repellat odio voluptatem eos veniam saepe ducimus quisquam recusandae illo accusantium, quos praesentium!</p>
+                <h1 className="project-title">Github<Link to={'https://github.com/Noah-Huff'}><img id="github-svg" src={githubLogo}></img></Link></h1>
+                <p>Here you can find a few more projects I've worked on. From figuring out a few UNIX system calls, to building a couple full stack we applications, here you can see a glimpse into my programming interests!</p>
+                <a href="https://github.com/Noah-Huff"><div className="button">See My Github</div></a>
+
             </div>
 
         </div>
