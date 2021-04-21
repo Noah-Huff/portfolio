@@ -7,11 +7,13 @@ let app = express();
 let PORT = process.env.PORT;
 
 app.use('/api', (req, res, next) => {
-    if (process.env.NODE_ENV == 'production') {
-        console.log("Production CORS");
-        res.header("Access-Control-Allow-Origin", `Origin: https://noahhuff.herokuapp.com`);
-    } else {
+    console.log("inside /api for express")
+    if (process.env.NODE_ENV == 'development') {
+        console.log("Development CORS");
         res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+    } else {
+        console.log("Production CORS");
+        res.header("Access-Control-Allow-Origin", `https://noahhuff.herokuapp.com`);
     }
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     res.header('Access-Control-Allow-Methods', 'GET, PATCH, PUT, POST, DELETE, OPTIONS');
