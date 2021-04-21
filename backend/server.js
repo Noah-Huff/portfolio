@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const sentEmail = require('./functions/sendEmail');
 
 let app = express();
-let PORT = 5000;
+let PORT = 4000;
 
 app.use('/api', (req, res, next) => {
     res.header("Access-Control-Allow-Origin", "http://localhost:3000");
