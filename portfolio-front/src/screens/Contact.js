@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios';
+import { Next } from 'react-bootstrap/esm/PageItem';
 
 const Contact = () => {
     let [comment, setComment] = useState("");
@@ -22,19 +23,22 @@ const Contact = () => {
         //JSON.stringify(sendData);
         console.log("Send Data ", sendData);
 
-        const res = await axios.post('http://localhost:5000/api/contact/comment', sendData, {
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
-        console.log('RES ', res);
+        try {
+            const res = await axios.post('http://localhost:5000/api/contact/comment', sendData);
+        } catch (err) {
+            console.log("Error ", err);
+        }
+
+        setComment("");
+        setName("");
+        setEmail("");
+        console.log("Email ", email);
 
     }
 
     return (
 
-        <div className="wrapper">
-            <div className="project project-with-shape">
+            <div className="text-card contact-form">
                 <p>
                     I'm so glad you came and visited my website. If you have comments, questions, or anything at all please send me a note.
                     Leave your email, and I'll be sure and get back to you!
@@ -45,9 +49,8 @@ const Contact = () => {
                 <input id="email" className="text-input-1line" type="email" value={email} onChange={() => setEmail(document.getElementById("email").value)}></input>
                 <label className="text-input-label">Comments: </label>
                 <textarea id="comment" className="textarea-input" rows={7} value={comment} onChange={() => setComment(document.getElementById("comment").value)}></textarea>
-                <button onClick={sendComment} id="proj3" className="contact-btn"><div className="button3">Submit</div></button>
+                <button onClick={sendComment}  className="contact-btn"><div className="button">Submit</div></button>
             </div>
-        </div>
     )
 }
 

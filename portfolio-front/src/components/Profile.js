@@ -2,10 +2,7 @@ import React from 'react'
 
 const Profile = () => {
     return (
-        <div className="wrapper">
-            <div className="project-with-shape project">
-
-                <p >
+                <p className="text-card">
                     Recently, a mentor recommended the Gallups StrengthsFinder
                     quiz to learn more about applying my strengths. Several of
                     these strengths are related to adaptability and learning.
@@ -29,8 +26,6 @@ const Profile = () => {
             interests which I’m looking forward to applying in a professional
             environment.
             </p>
-            </div>
-        </div>
     )
 }
 

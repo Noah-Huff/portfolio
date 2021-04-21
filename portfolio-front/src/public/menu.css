@@ -37,7 +37,7 @@
     position: relative;
     width: 100%;
     height: 2px;
-    background-color: var(--primary-teal);
+    background-color: var(--primary-text);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,10 +45,10 @@
 }
 /* top and bottom lines */
 .menu-wrap .hamburger > div:before {
-    background-color: var(--primary-yellow);
+    background-color: var(--primary-text);
 }
 .menu-wrap .hamburger > div:after {
-    background-color: var(--primary-red);
+    background-color: var(--primary-text);
 }
 .menu-wrap .hamburger > div:before,
 .menu-wrap .hamburger >div:after {
