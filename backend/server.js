@@ -1,17 +1,17 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const sentEmail = require('./functions/sendEmail');
+const sendEmail = require('./functions/sendEmail');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 let app = express();
 let PORT = process.env.PORT;
 
 app.use('/api', (req, res, next) => {
-    console.log("inside /api for express")
-    console.log("Development CORS");
     console.log("Process ", process.env.NODE_ENV);
     res.header("Access-Control-Allow-Origin", process.env.CORS);
-
 
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     res.header('Access-Control-Allow-Methods', 'GET, PATCH, PUT, POST, DELETE, OPTIONS');
@@ -19,9 +19,13 @@ app.use('/api', (req, res, next) => {
 });
 app.use(bodyParser.json());
 
+app.get("/api/test", (req, res) => {
+    res.end("Successful test!");
+});
+
 app.post('/api/contact/comment', (req, res) => {
     console.log("INSIDE EXPRESS POST", req.body.comment);
-    sentEmail.send(req.body.comment, req.body.name, req.body.email);
+    sendEmail.send(req.body.comment, req.body.name, req.body.email);
     res.end("success");
 });
 

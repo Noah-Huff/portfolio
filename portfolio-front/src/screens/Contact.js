@@ -10,6 +10,7 @@ const Contact = () => {
 
     let sendComment = async () => {
         console.log("Send Comment");
+
         console.log("Name: ", name);
         console.log("Email: ", email);
         console.log("Comment: ", comment);
@@ -24,8 +25,10 @@ const Contact = () => {
         //JSON.stringify(sendData);
         console.log("Send Data ", sendData);
 
+        let tag = await axios.get(`/api/test`);
+        console.log("TEST AXIOS GET ", tag);
         try {
-            const res = await axios.post('http://localhost:5000/api/contact/comment', sendData);
+            await axios.post(`/api/contact/comment`, sendData);
         } catch (err) {
             console.log("Error ", err);
         }
