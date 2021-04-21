@@ -8,7 +8,7 @@ let PORT = process.env.PORT;
 
 app.use('/api', (req, res, next) => {
     if (process.env.NODE_ENV === 'production') {
-        res.header("Access-Control-Allow-Origin", `http://localhost:5000`);
+        res.header("Access-Control-Allow-Origin", `Origin: https://noahhuff.herokuapp.com`);
     } else {
         res.header("Access-Control-Allow-Origin", "http://localhost:3000");
     }
