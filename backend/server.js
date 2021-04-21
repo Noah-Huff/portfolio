@@ -25,7 +25,6 @@ app.post('/api/contact/comment', (req, res) => {
     res.end("success");
 });
 
-
 const __dir = path.resolve();
 if(process.env.NODE_ENV === 'production') {
     console.log("PRODUCTION");
