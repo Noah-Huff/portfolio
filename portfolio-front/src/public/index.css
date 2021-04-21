@@ -86,6 +86,12 @@ button {
   background-color: transparent;
   position: absolute;
 }
+#name-svg {
+  position: absolute;
+  width: 40%;
+  margin-left: 100px;
+  padding-top: 30px;
+}
 .text {
   text-align: center;
   color: var(--primary-text);
@@ -105,7 +111,7 @@ button {
 .under-lake {
   background-image: linear-gradient(var(--primary-green), var(--primary-background));
   /* height: 100vh; */
-  height: 550px;
+  /* height: 550px; */
   margin-top: 0px;
   padding-top: 20px;
 }
@@ -115,12 +121,6 @@ button {
   font-size: 50px;
   margin-top: -2px;
   padding-top: 50px;
-}
-.test {
-  padding: 30px;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
 }
 .text-card {
   margin-bottom: 30px;
@@ -144,4 +144,9 @@ button {
 }
 .nh-icon {
   margin-left: 20px;
+}
+.footer {
+  margin-bottom: 20px;
+  margin-left: auto;
+  text-align: center;
 }

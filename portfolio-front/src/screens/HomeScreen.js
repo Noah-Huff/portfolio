@@ -3,12 +3,13 @@ import MountainLake from '../components/MountainLake';
 import Profile from '../components/Profile';
 import Rellax from 'rellax';
 import { Container } from 'react-bootstrap';
+import ArialNoahHuff from '../public/ArialNoahHuff.svg';
 
 
 const HomeScreen = () => {
 
     useEffect(() => {
-        let name = new Rellax('#name-title', {
+        let name = new Rellax('#name-svg', {
             speed: -5,
             center: false,
             wrapper: null,
@@ -20,7 +21,8 @@ const HomeScreen = () => {
 
     return (
         <div>
-            <h1 id="name-title" >Noah Huff</h1>
+            <img src={ArialNoahHuff} id="name-svg"></img>
+            {/* <h1 id="name-title">Noah Huff</h1> */}
             < MountainLake />
             <div class="under-lake">
                     <Profile/>
