@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const bodyParser = require('body-parser');
 const sentEmail = require('./functions/sendEmail');
 
@@ -18,5 +19,14 @@ app.post('/api/contact/comment', (req, res) => {
     sentEmail.send(req.body.comment);
     res.end("success");
 });
+
+
+const __dir = path.resolve();
+if(process.env.NODE_ENV == 'production') {
+    app.use(express.static(path.join(__dir, 'portfolio-front/build')));
+
+    app.get('*', (req, res) => res.sendFile(path.resolve(__dir, 'portfolio-front', 'build', 'index.html')));
+}
+console.log("ENV ", process.env.NODE_ENV);
 
 app.listen(PORT, console.log("Express Listening on port: ", PORT));

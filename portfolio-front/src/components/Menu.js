@@ -38,7 +38,7 @@ const Menu = () => {
                         <ul>
                             <li><Link to={`/`} onClick={toggleMenu}>Home</Link></li>
                             {/* <li><a>About Me</a></li> */}
-                            <li><Button onClick={test}>Test</Button></li>
+                            {/* <li><Button onClick={test}>Test</Button></li> */}
                             <li><Link to={`/projects`} onClick={toggleMenu}>Projects</Link></li>
                             <li><Link to={'/contact'} onClick={toggleMenu}>Contact</Link></li>
                         </ul>
