@@ -22,7 +22,9 @@ app.post('/api/contact/comment', (req, res) => {
 
 
 const __dir = path.resolve();
-if(process.env.NODE_ENV == 'production') {
+if(process.env.NODE_ENV === 'production') {
+    console.log("PRODUCTION");
+
     app.use(express.static(path.join(__dir, 'portfolio-front/build')));
 
     app.get('*', (req, res) => res.sendFile(path.resolve(__dir, 'portfolio-front', 'build', 'index.html')));
