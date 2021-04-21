@@ -16,6 +16,7 @@ app.use(bodyParser.json());
 app.post('/api/contact/comment', (req, res) => {
     console.log("INSIDE EXPRESS POST", req.body.comment);
     sentEmail.send(req.body.comment);
+    res.end("success");
 });
 
 app.listen(PORT, console.log("Express Listening on port: ", PORT));
