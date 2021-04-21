@@ -12,6 +12,7 @@ node_modules
 
 # production
 /build
+/portfolio-front/build
 
 # misc
 .DS_Store
