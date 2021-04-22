@@ -10,7 +10,7 @@ const HomeScreen = () => {
 
     useEffect(() => {
         let name = new Rellax('#name-svg', {
-            speed: -5,
+            speed: -3,
             center: false,
             wrapper: null,
             round: true,
