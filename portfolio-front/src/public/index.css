@@ -129,8 +129,8 @@ button {
   padding: 15px;
   border-radius: 30px;
   background-color: var(--primary-background);
-  box-shadow:  5px 5px 10px var(--primary-box-shadow),
-             -5px -5px 10px var(--secondary-box-shadow);
+  box-shadow:  2px 2px 4px var(--primary-box-shadow),
+             -2px -2px 4px var(--secondary-box-shadow);
 }
 .contact-form {
   width: 85%;
@@ -143,6 +143,7 @@ button {
   margin-top: 0;
 }
 .projects-wrapper {
+  padding-top: 50px;
   background-image: linear-gradient(to bottom, #22544c, #51787d, #899ea8, #c0c5cd, #f1f1f1);}
 .nh-icon {
   margin-left: 20px;
