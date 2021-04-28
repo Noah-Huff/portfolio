@@ -25,10 +25,15 @@ const Projects = () => {
             </div>
 
             <div className="text-card">
+                <h1 className="project-title">This Portfolio Site</h1>
+                <p>In order to become more familiar with the technology, I used React.js for this website. I decided to explore creating an SVG and adding parallax effects for the homepage. After drewing the background picture, I used a library called Rellax.js to add different scrolling speeds to each layer on the SVG image. In order to have a contact page, I added a very minimal backend that sends an email to my gmail on successful submission by the user. Be sure to check out the source code on Github!</p>
+                <a href="https://github.com/Noah-Huff/portfolio"><div className="button">Github Code</div></a>
+            </div>
+
+            <div className="text-card">
                 <h1 className="project-title">Github<Link to={'https://github.com/Noah-Huff'}><img id="github-svg" src={githubLogo}></img></Link></h1>
                 <p>Here you can find a few more projects I've worked on. From figuring out a few UNIX system calls, to building a couple full stack we applications, here you can see a glimpse into my programming interests!</p>
-                <a href="https://github.com/Noah-Huff"><div className="button">See My Github</div></a>
-
+                <a href="https://github.com/Noah-Huff/"><div className="button">See My Github</div></a>
             </div>
 
         </div>
