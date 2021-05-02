@@ -4,11 +4,14 @@ import Profile from '../components/Profile';
 import Rellax from 'rellax';
 import { Container } from 'react-bootstrap';
 import ArialNoahHuff from '../public/ArialNoahHuff.svg';
+import pathLength from '../public/pathLength';
+import NameTitle from '../components/NameTitle';
 
 
 const HomeScreen = () => {
 
     useEffect(() => {
+        pathLength();
         let name = new Rellax('#name-svg', {
             speed: -3,
             center: false,
@@ -21,10 +24,11 @@ const HomeScreen = () => {
 
     return (
         <div>
-            <img src={ArialNoahHuff} id="name-svg"></img>
+            <NameTitle/>
+            {/* <img src={ArialNoahHuff} id="name-svg"></img> */}
             {/* <h1 id="name-title">Noah Huff</h1> */}
             < MountainLake />
-            <div class="under-lake">
+            <div className="under-lake">
                     <Profile/>
             </div>
         </div>
