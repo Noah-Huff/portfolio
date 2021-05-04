@@ -100,7 +100,12 @@ button {
 }
 @media (max-width: 780px) {
   #name-svg {
-    margin-top: -250px;
+    margin-top: -180px;
+  }
+}
+@media (max-width: 500px) {
+  #name-svg {
+    margin-top: -220px;
   }
 }
 #name-component {
