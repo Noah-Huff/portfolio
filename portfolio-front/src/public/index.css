@@ -90,7 +90,22 @@ button {
   position: absolute;
   width: 50%;
   margin-left: 100px;
-  padding-top: 30px;
+  margin-top: -50px;
+  /* padding-top: 30px; */
+}
+@media (max-width: 1150px) {
+  #name-svg {
+    margin-top: -150px;
+  }
+}
+@media (max-width: 780px) {
+  #name-svg {
+    margin-top: -250px;
+  }
+}
+#name-component {
+  /* margin-top: -50px; */
+  /* top: 0; */
 }
 #name-svg path {
   fill: transparent;

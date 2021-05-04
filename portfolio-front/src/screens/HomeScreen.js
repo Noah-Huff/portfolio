@@ -24,7 +24,7 @@ const HomeScreen = () => {
 
     return (
         <div>
-            <NameTitle/>
+            <NameTitle id="name-component"/>
             {/* <img src={ArialNoahHuff} id="name-svg"></img> */}
             {/* <h1 id="name-title">Noah Huff</h1> */}
             < MountainLake />
