@@ -32,7 +32,7 @@ const Projects = () => {
 
             <div className="text-card">
                 <h1 className="project-title">Github<Link to={'https://github.com/Noah-Huff'}><img id="github-svg" src={githubLogo}></img></Link></h1>
-                <p>Here you can find a few more projects I've worked on. From figuring out a few UNIX system calls, to building a couple full stack we applications, here you can see a glimpse into my programming interests!</p>
+                <p>Here you can find a few more projects I've worked on. From figuring out a few UNIX system calls, to building a couple full stack web applications, here you can see a glimpse into my programming interests!</p>
                 <a href="https://github.com/Noah-Huff/"><div className="button">See My Github</div></a>
             </div>
 
