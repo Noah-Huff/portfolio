@@ -28,7 +28,7 @@ const HomeScreen = () => {
             {/* <img src={ArialNoahHuff} id="name-svg"></img> */}
             {/* <h1 id="name-title">Noah Huff</h1> */}
             < MountainLake />
-            <div className="under-lake">
+            <div className="under-lake ">
                     <Profile/>
             </div>
         </div>

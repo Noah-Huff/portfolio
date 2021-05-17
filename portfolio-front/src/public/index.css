@@ -4,6 +4,7 @@
   --sepia: #EBD3AD;
   --light-grey: #9EA3B0;
   --wine: #6A2E35;
+  --min-padding: 15px;
 }
 * {
   box-sizing: border-box;
@@ -18,6 +19,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--light-grey);
+
+
+  line-height: 1.6;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -186,6 +190,8 @@ button {
   /* height: 100vh; */
   /* height: 550px; */
   margin-top: 0px;
+  padding-left: var(--min-padding);
+  padding-right: var(--min-padding);
   padding-top: 20px;
 }
 .post-text {
@@ -196,7 +202,8 @@ button {
   padding-top: 50px;
 }
 .text-card {
-  max-width: 900px;
+  max-width: 85ch;
+  /* max-width: 900px; */
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -217,6 +224,8 @@ button {
   margin-top: 0;
 }
 .projects-wrapper {
+  padding-left: var(--min-padding);
+  padding-right: var(--min-padding);
   padding-top: 50px;
   background-image: linear-gradient(to bottom, #22544c, #51787d, #899ea8, #c0c5cd, #f1f1f1);}
 .nh-icon {
