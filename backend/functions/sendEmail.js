@@ -9,7 +9,7 @@ const send = (userComment, userName, userEmail) => {
         host: 'smtp.gmail.com',
         port: 587,
         secure: false,
-        //authMethod: 'PLAIN',
+        authMethod: 'PLAIN',
         auth: {
             user: process.env.EMAIL,
             pass: process.env.PSW
