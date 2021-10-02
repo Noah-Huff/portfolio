@@ -7,9 +7,9 @@ const send = (userComment, userName, userEmail) => {
     const transporter = nodeMailer.createTransport(smtpTransport({
         //service: 'gmail',
         host: 'smtp.gmail.com',
-        port: 587,
-        secure: false,
-        authMethod: 'PLAIN',
+        port: 465,
+        secure: true,
+        //authMethod: 'PLAIN',
         auth: {
             user: process.env.EMAIL,
             pass: process.env.PSW
